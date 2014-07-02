@@ -27,10 +27,12 @@ Date: 2/7/14
 <script>
 
 var rotate=1;           //to allow rotate
-
-
 var active=59;
+var angle = 720;		//angle to rotate give multiple of 360 for straight images
+var interval=8000;		//time interval after which pictures change
 var showimage = function(a){
+
+
 if(a=="next")
 a=active+1;
 if(a=="back")
@@ -39,7 +41,7 @@ if(a!=active){
 
 	if(rotate==1)
 	{$("#"+active).rotate({ 
-    animateTo:360});}
+    animateTo:angle});}
        
 	$('#'+active).animate({
     left:(parseInt(active%10)*10)+"%",
@@ -62,17 +64,18 @@ if(a!=active){
 	}
 }
 
-var auto= function(a)
+var automatic= function(a)
 {
+
+setTimeout(automatic,interval);
 var b=Math.random();
 b=parseInt(60+b*40);
 showimage(b);
-setTimeout(auto,8000);
 }
-auto();
-	
-	
-	</script>
+
+automatic();                            //comment this line to stop changing automatically
+
+</script>
 
 
 <?php 
