@@ -1,3 +1,23 @@
+<!--
+========================================APGallery===================================================================
+
+
+APGallery : Picture gallery with different appearance functionality.
+Clone github: https://www.github.com/chowmean/APGallery.git 
+
+
+
+author : chowmean
+mail: gaurav.dev.iiitm@gmail.com
+github: github.com/chowmean
+linkedin: linkedin.com/in/chowmean
+fb: facebook.com/chowmean
+Date: 2/7/14
+
+-->
+
+
+
 <body>
 <script type="text/javascript" src="jQueryRotate.js"></script>
 <script type="text/javascript" src="jquery.js"></script>
@@ -6,7 +26,7 @@
 
 <script>
 
-var rotate=1;           //if allow rotate
+var rotate=1;           //to allow rotate
 
 
 var active=59;
